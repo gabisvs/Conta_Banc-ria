@@ -1,6 +1,8 @@
 import readlinesync = require("readline-sync");
 import { colors } from './src/util/Colors';
 import { Conta } from "./src/model/Conta";
+import { ContaCorrente } from "./src/model/ContaCorrente";
+import { ContaPoupanca } from './src/model/ContaPoupanca';
 
 export function main() {
 
@@ -40,6 +42,36 @@ export function main() {
     console.log(`Depositar 300000.00 reais da Conta c2: `); 
     c1.depositar(300000.25)
     c2.visualizar();
+
+    // Novas Instâncias da Classe ContaCorrente (Objetos)
+    const cc1: ContaCorrente = new ContaCorrente (3, 1234, 1, 'Amanda Magro', 1000000.00, 100000);
+    const cc2: ContaCorrente = new ContaCorrente (4, 1234, 1, 'João da Silva', 1000.00, 100.00);
+
+    cc1.visualizar();
+    cc2.visualizar(); 
+
+    console.log(`\nSaque de R$ 25.000,00 na Conta cc1: ${cc1.sacar(25000.00)}`);
+    cc1.visualizar();
+
+    console.log(`\nSaque de R$ 1.500,00 na Conta cc2: ${cc2.sacar(1500.00)}`);
+
+    console.log(`\Depositar R$ 3.000.99 reais da conta cc2: `);
+    cc2.depositar(3000.99)
+    cc2.visualizar();
+
+    // Novas Instâncias da Classe ContaPoupanca (Objetos)
+    const cp1: ContaPoupanca = new ContaPoupanca (3, 1234, 2, 'Érica Virgilio', 1000.00, 10);
+
+    cp1.visualizar();
+
+    console.log(`\nSaque de R$ 200,00 na Conta cp1: ${cp1.sacar(200.00)}`);
+    cp1.visualizar();
+
+
+    console.log(`\Depositar R$ 1.000.00 reais da conta cp1: `);
+    cp1.depositar(1000.00)
+    cp1.visualizar();
+
 
     while (true) {
 
