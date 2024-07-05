@@ -2,7 +2,7 @@ import { Conta } from "../model/Conta";
 
 export interface ContaRepository{
 
- // Metodos do Crud 
+ // Métodos do Crud 
     procurarPorNumero(numero: number): void;
     listarTodas(): void; 
     cadastrar(conta: Conta): void; 
@@ -10,7 +10,7 @@ export interface ContaRepository{
     deletar(numero: number): void; 
 
 
-// Metodos Bancários
+// Métodos Bancários
 
 sacar(numero: number, valor: number): void;
 depositar(numero: number, valor: number): void;
