@@ -59,7 +59,7 @@ export function main() {
     cc2.depositar(3000.99)
     cc2.visualizar();
 
-    // Novas Instâncias da Classe ContaPoupanca (Objetos)
+    // Novas Instâncias da Classe ContaPoupanca Teste (Objetos)
     const cp1: ContaPoupanca = new ContaPoupanca (3, 1234, 2, 'Érica Virgilio', 1000.00, 10);
 
     cp1.visualizar();
