@@ -25,19 +25,19 @@ export function main() {
         console.log(colors.bg.black, colors.fg.greenstrong, 
                     "¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨");
         console.log("                                                     ");
-        console.log("                       Tcbank                        ");
+        console.log("                      JG BANK                        ");
         console.log("                                                     ");
         console.log("¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨");
         console.log("                                                     ");
-        console.log("            1 - Criar Conta                          ");
-        console.log("            2 - Listar todas as Contas               ");
-        console.log("            3 - Buscar Conta por Numero              ");
-        console.log("            4 - Atualizar Dados da Conta             ");
-        console.log("            5 - Apagar Conta                         ");
-        console.log("            6 - Sacar                                ");
-        console.log("            7 - Depositar                            ");
-        console.log("            8 - Transferir valores entre Contas      ");
-        console.log("            9 - Sair                                 ");
+        console.log("            [1] Criar Conta                          ");
+        console.log("            [2] Listar todas as Contas               ");
+        console.log("            [3] Buscar Conta por Número              ");
+        console.log("            [4] Atualizar Dados da Conta             ");
+        console.log("            [5] Apagar Conta                         ");
+        console.log("            [6] Sacar                                ");
+        console.log("            [7] Depositar                            ");
+        console.log("            [8] Transferir valores entre Contas      ");
+        console.log("            [9] Sair                                 ");
         console.log("                                                     ");
         console.log("¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨");
         console.log("                                                     ", 
@@ -47,8 +47,8 @@ export function main() {
         opcao = readlinesync.questionInt("");
 
         if (opcao == 9) {
-            console.log(colors.fg.greenstrong, 
-                "\nTcBank   - O seu Futuro começa aqui!");
+            console.log(colors.fg.bluestrong, 
+                "\nJG BANK   - O seu Futuro começa aqui!");
             sobre();
             console.log(colors.reset, "");
             process.exit(0);
@@ -185,7 +185,7 @@ export function main() {
                     console.log("Digite o número da Conta: ")
                     numero = readlinesync.questionInt("");
 
-                    console.log("Digite o valor do Deposito: ")
+                    console.log("Digite o valor do Depósito: ")
                     valor = readlinesync.questionFloat("");
 
                     contas.depositar(numero,valor);

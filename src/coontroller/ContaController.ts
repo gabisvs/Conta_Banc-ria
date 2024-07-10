@@ -75,6 +75,7 @@ export class ContaController implements ContaRepository{
         let buscaContaDestino = this.buscarnoArray(numeroDestino);
 
         if(buscaContaOrigem !== null && buscaContaDestino !== null) {
+            
             if(buscaContaOrigem.sacar(valor) === true){
               buscaContaDestino.depositar(valor);
             console.log("\nA Transferência foi efetuado com Sucesso!")
